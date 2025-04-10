@@ -1,2 +1,1 @@
-# obsitele-sync
-Synchronization telegram and obsidian
+перед запуском заходим в config.py и читаем каждый пункт и настраиваем под себя
