@@ -1,5 +1,5 @@
 import os
-
+# ВСЕ ВПИСЫВАЕМ В СВОБОДНЫЕ КАВЫЧКИ. ПРИМЕР os.getenv("BOT_TOKEN", "СЮДА")
 # токен полученный из BotFather
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 #пароль на архив бэкапов
