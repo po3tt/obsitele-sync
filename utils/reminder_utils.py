@@ -152,7 +152,7 @@ class ReminderParser:
                 identifier = f"{file_path.name}:{reminder_time.timestamp()}:{task}"
                 
                 if 0 <= time_diff <= 60 and identifier not in self.sent_reminders:
-                    events.append(f"⏰ {task} ({reminder_time.strftime('%d.%m.%Y %H:%M')})")
+                    events.append(f" {task.replace("- [ ] ","")} ({reminder_time.strftime('%d.%m.%Y %H:%M')})")
                     self.sent_reminders.add(identifier)
                     
         except Exception as e:
