@@ -8,12 +8,15 @@
 перед запуском заходим в config.py и читаем каждый пункт и настраиваем под себя
 
 Для установки в докер, создаем образ:
+```
 docker build -t obsidian_tg:latest .
-
+```
 Запускаем контейнер:
+```
 docker run -d --name=ObsiTele-Sync \
 -e TZ=Europe/Moscow \
 -v /mnt/user/appdata/syncthing/Obsidian:/obsidian \ # тут пути на ваше усмотрение по вашей задачи. до двоеточия место расположения вне контейнера, после двоеточия название папки в контейнере (она же и указываеться в config.py)
 -v /mnt/user/Backup/Obsidian:/backups  \ # тут пути на ваше усмотрение по вашей задачи. до двоеточия место расположения вне контейнера, после двоеточия название папки в контейнере (она же и указываеться в config.py)
 --restart unless-stopped \
 obsidian_tg:latest
+```
